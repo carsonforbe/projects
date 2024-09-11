@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1>Add Task</h1>
+    </header>
+    <div class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="add_task.html"><i class="fa fa-plus"></i> Add Task</a></li>
+                    <li><a href="delete_task.html"><i class="fa fa-trash"></i> Delete Task</a></li>
+                    <li><a href="completed_task.html"><i class="fa fa-check"></i> Completed Task</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="New Task" required>
+                <input type="date" id="due-date-input" required>
+                <select id="priority-input">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
