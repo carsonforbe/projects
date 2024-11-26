@@ -1,0 +1,20 @@
+<form method="POST">
+    {% csrf_token %}
+    <label for="bus_stop">Select Bus Stop:</label>
+    <select name="bus_stop">
+        {% for stop in bus_stops %}
+            <option value="{{ stop.id }}">{{ stop.name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Show Next Buses</button>
+</form>
+
+<h3>Next Buses:</h3>
+<ul>
+    {% for bus in next_buses %}
+        <li>{{ bus.bus_number }} at {{ bus.arrival_time }}</li>
+    {% empty %}
+        <li>No upcoming buses.</li>
+    {% endfor %}
+</ul>
+
